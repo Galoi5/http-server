@@ -1,6 +1,19 @@
 # http-server
 A simple multithreaded HTTP server made using C++. The server is multithreaded using a simple implementation of thread pools. It handles requests and executes itself using OOP principles. As well as handling multiple concurrent connections, it also supports persistent connections (not closing the client file descriptor for a valid connection until a `Connection: Close` header is given, where it will execute the last request, close the client and free a spot in the thread pool.)
 
+### Building
+Building uses Cmake. Simply run the `build.sh` file:
+```
+$ chmod +x build.sh
+$ build.sh
+```
+### Running
+To run the server, simply execute the executable and specify a serving directory to serve the `/files/` endpoint:
+```
+$ cd build
+$ ./server --directory /some/given/directory
+```
+
 ### Endpoints
 The server features multiple endpoints:
 
