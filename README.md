@@ -5,7 +5,7 @@ A simple multithreaded HTTP server made using C++. The server is multithreaded u
 Building uses Cmake. Simply run the `build.sh` file:
 ```
 chmod +x build.sh
-build.sh
+./build.sh
 ```
 ### Running
 To run the server, simply execute the executable and specify a serving directory to serve the `/files/` endpoint:
